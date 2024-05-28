@@ -1,0 +1,50 @@
+﻿@{
+    Layout = "_Dashboard_Layout";
+    ViewData["Title"] = "Categories";
+
+
+
+}
+
+@model List<Category>
+
+<div class="card w-100">
+    <div class="card-header d-flex align-items-center justify-content-between">
+        <h3 class="card-title">create</h3>
+        
+
+    </div>
+
+    <div class="card-body">
+        <form >
+            <div class="form-group">
+                <label for="Name">Name</label>
+                <input type="text" name="Name" id="Name"/>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-primary">Add</button>
+            </div>
+        </form>
+
+
+        @* <form>
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" type="text" />
+            </div>
+        
+            <div class="card-footer">
+                <button class="btn btn-primary">Add</button>
+            </div> 
+        </form>*@
+    </div>
+
+
+</div>
+
+
+
+
+
+
+

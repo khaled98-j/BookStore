@@ -14,13 +14,13 @@ namespace BookStore.Controllers
 
         public IActionResult Index()
         {
-            return View();
-        }
-
-        public IActionResult GetAll()
-        {
             var categories = context.Categories.ToList();
             return View(categories);
+        }
+
+        public IActionResult Create()
+        {
+            return View();
         }
 
     }

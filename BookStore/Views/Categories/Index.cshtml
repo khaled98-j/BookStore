@@ -1,7 +1,53 @@
 ﻿@{
     Layout = "_Dashboard_Layout";
+    ViewData["Title"] = "Categories";
+   
+
+
 }
 
-<div>
-    <h2>khaled</h2>
+@model List<Category>
+
+<div class="card w-100">
+    <div class="card-header d-flex align-items-center justify-content-between">
+        <h3 class="card-title">Show</h3>
+        <a asp-controller="Categories" asp-action="Create" class="btn btn-primary">create</a>
+        
+    </div>
+
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th style="width: 10px">#</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (!Model.Any())
+                {
+                    <tr>
+                        <td colspan="2">
+                            no data found
+                        </td>
+
+                    </tr>
+                }
+                else
+                {
+                    @foreach (var itme in Model)
+                    {
+                        <tr>
+                            <td>@itme.Id</td>
+                            <td>@itme.Name</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+  
+
 </div>
+
+
