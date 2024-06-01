@@ -1,0 +1,77 @@
+﻿@using BookStore.ViewModels
+@model BookFormVM
+
+@{
+    Layout = "_Dashboard_Layout";
+    ViewData["Title"] = "Book";
+}
+
+@section subTitle {
+    Create
+}
+
+
+<div class="card w-100">
+    <div class="card-header d-flex align-items-center justify-content-between">
+        <h3 class="card-title">Create</h3>
+    </div>
+
+    <form asp-controller="Books" asp-action="Create" enctype="multipart/form-data">
+        <div class="card-body">
+
+            <div class="form-group">
+                <label asp-for="Title"></label>
+                <input asp-for="Title" type="text" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AuthorId"></label>
+                <select asp-for="AuthorId" asp-items="@Model.Authors" class="form-control"></select>
+                <span asp-validation-for="AuthorId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Publisher"></label>
+                <input asp-for="Publisher" type="text" class="form-control" />
+                <span asp-validation-for="Publisher" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PublishDate"></label>
+                <input asp-for="PublishDate" type="date" class="form-control" />
+                <span asp-validation-for="PublishDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageUrl"></label>
+                <input asp-for="ImageUrl" type="file" class="form-control" />
+                <span asp-validation-for="ImageUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description"></label>
+                <input asp-for="Description" type="text" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SelectedCategories"></label>
+                <select asp-for="SelectedCategories" asp-items="@Model.Categories" class="form-control"></select>
+                <span asp-validation-for="SelectedCategories" class="text-danger"></span>
+            </div>
+
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">
+                Add
+            </button>
+        </div>
+    </form>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+

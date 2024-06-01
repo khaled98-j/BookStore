@@ -15,4 +15,9 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.17" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\image\books\" />
+    <Folder Include="wwwroot\khaled\" />
+  </ItemGroup>
+
 </Project>

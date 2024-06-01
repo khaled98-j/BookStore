@@ -1,0 +1,41 @@
+﻿@using BookStore.ViewModels
+@model AuthorVM
+
+@{
+    Layout = "_Dashboard_Layout";
+    ViewData["Title"] = "Author";
+}
+
+@section subTitle {
+    Details
+}
+
+
+<div class="card w-100">
+    <div class="card-header d-flex align-items-center justify-content-between">
+        <h3 class="card-title">Details</h3>
+    </div>
+
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th style="width: 10px">#</th>
+                    <th>Name</th>
+                    <th>CreatedOn</th>
+                    <th>UpdatedOn</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.Id</td>
+                    <td>@Model.Name</td>
+                    <td>@Model.CreatedOn</td>
+                    <td>@Model.UpdatedOn</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

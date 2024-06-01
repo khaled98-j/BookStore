@@ -1,9 +1,9 @@
 ﻿@using BookStore.ViewModels
-@model CategoryVM
+@model AuthorVM
 
 @{
     Layout = "_Dashboard_Layout";
-    ViewData["Title"] = "Category";
+    ViewData["Title"] = "Author";
 }
 
 @section subTitle {
@@ -14,16 +14,16 @@
 <div class="card w-100">
     <div class="card-header d-flex align-items-center justify-content-between">
         <h3 class="card-title">@(Model?.Id == null ? "Create" : "Edit")</h3>
-        
+
 
     </div>
 
-    <form asp-controller="Categories" >
+    <form asp-controller = "Authors">
         <div class="card-body">
 
             <div class="form-group">
                 <label asp-for="Name"></label>
-                <input asp-for="Name" type="text" class="form-control"/>
+                <input asp-for="Name" type="text" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
 
@@ -31,7 +31,7 @@
         <div class="card-footer">
             <button type="submit" class="btn btn-primary">
                 @(Model?.Id == null ? "Add" : "Update")
-                </button>
+            </button>
         </div>
     </form>
 
